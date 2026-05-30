@@ -2,25 +2,44 @@ package com.samaksh.weather_api.model;
 
 public class WeatherResponse {
     private String city;
-    private int temperature;
+    private double temperature;
     private String condition;
+    private double humidity;
+    private double feelsLike;
+    private Double precip;
+    private String description;
 
-
-    public WeatherResponse(String city, int temperature, String condition){
+    public WeatherResponse(String city, double temperature, String condition, double humidity, double feelsLike, Double precip, String description) {
         this.city = city;
         this.temperature = temperature;
         this.condition = condition;
+        this.humidity = humidity;
+        this.feelsLike = feelsLike;
+        this.precip = precip;
+        this.description = description;
     }
 
-    public String getCity(){
+    public String getCity() {
         return city;
     }
 
-    public int getTemperature(){
+    public double getTemperature() {
         return temperature;
     }
 
-    public String getCondition(){
+    public String getCondition() {
         return condition;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public double getFeelsLike() {
+        return feelsLike;
+    }
+    
+    public String getDescription() {
+        return description;
     }
 }
