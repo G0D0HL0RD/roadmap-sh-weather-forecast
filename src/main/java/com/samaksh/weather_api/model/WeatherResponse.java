@@ -1,6 +1,8 @@
 package com.samaksh.weather_api.model;
 
-public class WeatherResponse {
+import java.io.Serializable;
+
+public class WeatherResponse implements Serializable{
     private String city;
     private double temperature;
     private String condition;
@@ -29,6 +31,10 @@ public class WeatherResponse {
 
     public String getCondition() {
         return condition;
+    }
+
+    public Double getPrecipitation() {
+        return precip;
     }
 
     public double getHumidity() {
